@@ -16,6 +16,10 @@ Now start serving Django locally:
 python manage.py runserver
 ```
 
+Set up
+```python manage.py migrate```
+
+
 Next, load the data:
 ```
 python manage.py load_chan_data
