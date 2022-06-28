@@ -121,10 +121,6 @@ def commit_posts_from_df(df, platform_obj):
     df = df.fillna('')
     new_posts = []
     threads = set()
-    if 'body_html' not in df:
-        df['body_html'] = ''
-    if 'replies' not in df:
-        df['replies'] = '{}'
     for index, row in tqdm(df.iterrows(), total=len(df)):
         try:
             if platform_obj.name == '4chan':
